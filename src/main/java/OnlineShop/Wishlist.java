@@ -1,3 +1,5 @@
+package OnlineShop;
+
 import java.util.ArrayList;
 
 public class Wishlist {

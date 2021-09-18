@@ -1,3 +1,5 @@
+package OnlineShop;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -10,7 +12,7 @@ public class UserAdress {
     private String City;
     private String Street;
     private Integer PostalCode;
-   // private ArrayList<UserAdress> userAdresses;
+   // private ArrayList<OnlineShop.UserAdress> userAdresses;
 }
 
 

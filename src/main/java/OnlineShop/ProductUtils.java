@@ -1,3 +1,5 @@
+package OnlineShop;
+
 import java.util.ArrayList;
 
 public class ProductUtils {
@@ -7,7 +9,7 @@ public class ProductUtils {
         products.add(new Product(1, 100, "good"));
         products.add(new Product(2, 200, "nice"));
         products.add(new Product(3, 300, "awesome"));
-        products.add(new Product(4, 500, "the best"));
+        products.add(new Product(4, 400, "the best"));
         return products;
 
     }

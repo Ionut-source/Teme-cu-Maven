@@ -1,3 +1,5 @@
+package OnlineShop;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
