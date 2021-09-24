@@ -7,13 +7,21 @@ import java.util.ArrayList;
 
 @Data
 @AllArgsConstructor
-public class UserAdress {
+class UserAddress {
+
 
     private String City;
     private String Street;
-    private Integer PostalCode;
-   // private ArrayList<OnlineShop.UserAdress> userAdresses;
+    private int PostalCode;
 }
+  //  private ArrayList<UserAddress> userAddresses;
+
+//private void billingAddress(String City, String Street, int PostalCode){
+//    }
+//    private void deliverAddress(String City, String Street, int PostalCode){
+//    }
+//}
+
 
 
 

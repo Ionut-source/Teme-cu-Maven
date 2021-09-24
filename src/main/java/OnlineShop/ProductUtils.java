@@ -1,5 +1,7 @@
 package OnlineShop;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
+
 import java.util.ArrayList;
 
 public class ProductUtils {
@@ -11,6 +13,5 @@ public class ProductUtils {
         products.add(new Product(3, 300, "awesome"));
         products.add(new Product(4, 400, "the best"));
         return products;
-
     }
 }

@@ -13,7 +13,7 @@ public class UserAccount{
     private String name;
     private String email;
     private String password;
-//    private OnlineShop.UserAdress userAdress;
+//    private OnlineShop.UserAddress userAddress;
 //    private ArrayList<OnlineShop.Order> orders;
 //    private ArrayList<OnlineShop.Wishlist>wishlists;
 }

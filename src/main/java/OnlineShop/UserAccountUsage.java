@@ -18,22 +18,27 @@ public class UserAccountUsage {
             System.out.println("\t" + products);
             products.forEach(Product::justReview);
 
-            UserAdress CiprianStanciu = new UserAdress("Bucharest", "Victoriei", 6545641);
-            UserAdress CosminLobont = new UserAdress("Bihor", "Fabricii", 654650);
-            ArrayList<UserAdress> userAdresses = new ArrayList<>(Arrays.asList(CiprianStanciu, CosminLobont));
-            System.out.println("\tOrasul pt userul Ciprian Stanciu este: " + CiprianStanciu.getCity());
-            System.out.format("Este lista de adrese goala? %b\n", userAdresses.isEmpty());
 
-            IntSummaryStatistics statistics = ProductUtils.getProduct()
-                    .stream()
-                    .mapToInt(Product::getPrice)
-                    .summaryStatistics();
+            ArrayList<UserAddress> userAddresses = new ArrayList<>();
+            UserAddress John = new UserAddress("Bucuresti", "Victoriei", 6545641);
+            UserAddress Diana = new UserAddress("Bihor", "Fabricii", 1471818);
+            UserAddress Melanie = new UserAddress("Brasov", "Fericirii", 5454654);
+            System.out.println("\tOrasul pt John este: " + John.getCity());
+            System.out.format("Este lista de utilizatori goala? %b\n", UserAccountSet.isEmpty());
+
+
+            IntSummaryStatistics statistics = new IntSummaryStatistics();
+            for (Product product : ProductUtils.getProduct()) {
+                int price = product.getPrice();
+                statistics.accept(price);
+            }
             System.out.println("\t" + statistics);
 
             HashMap<Integer, Product> wishlist = new HashMap<>();
             wishlist.put(1, products.get(1));
             wishlist.put(2, products.get(3));
-            System.out.println("Entry-urile din wishlist: ");
+            System.out.println("Produsele din wishlist: ");
+
 
             for (Map.Entry<Integer, Product> entry : wishlist.entrySet()) {
                 System.out.println("\t" + entry.getKey() + " -> " + entry.getValue());
@@ -41,6 +46,7 @@ public class UserAccountUsage {
         } catch (Exception ex) {
             System.out.println("A aparut o exceptie! " + ex.getMessage());
             ex.printStackTrace();
+
         }
     }
 }
